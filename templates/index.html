@@ -9,7 +9,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>How are u today? {{name}} {{age}}</h1>
+    {% for features in featureloop %}
+    <h1>How are u today? {{features.name}}</h1>
+    <h3>{{features.details}}</h3>
+    {% if features.is_true == True %}
+    <p>This feature is true</p>
+    {% endif %}
+    {% endfor %}
+
     <form method="POST" action="counter">
         {% csrf_token %}
         <textarea name="text" id="" cols="30" rows="10"></textarea>
