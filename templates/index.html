@@ -14,6 +14,8 @@
     <h3>{{features.details}}</h3>
     {% if features.is_true == True %}
     <p>This feature is true</p>
+    {% elif feature.is_true == False %}
+    <p>This feature is false</p>
     {% endif %}
     {% endfor %}
 
