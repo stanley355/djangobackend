@@ -23,5 +23,22 @@
         <textarea name="text" id="" cols="30" rows="10"></textarea>
         <input type="submit" />
     </form>
+
+    {% if user.is_authenticated %}
+    <h3>Welcome bro</h3>
+    {% else %}
+    <h3>Sorry not login</h3>
+
+    {% endif %}
+
+    {% if user.is_authenticated %}
+    <a href="logout">Logout</a>
+    {% else %}
+    <a href="login">Wanna Login?</a>
+
+    {% endif %}
+
+
+
 </body>
 </html>
